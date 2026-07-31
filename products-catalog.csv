@@ -1,13 +1,13 @@
-id,name,category,unit,price,image,desc,detail,bestseller,active,sort
-banh-mi,Bánh mì,Bánh Mì,ổ,4.000,product-banh-mi.jpg,"Ổ bánh cổ điển — vỏ giòn, ruột mềm.","Ổ bánh mì truyền thống của tiệm — phù hợp ăn kèm pate, chả, rau hoặc dùng làm nền cho nhiều kiểu nhân. Có thể đặt lẻ hoặc số lượng lớn cho quán.",TRUE,TRUE,10
-banh-mi-tuoi,Bánh mì tươi,Bánh Mì,ổ,40.000,product-banh-mi-tuoi.jpg,Mới ra lò trong ngày — nóng và thơm.,"Bánh mì vừa nướng trong ngày, giữ độ nóng giòn. Nên đặt trước nếu cần giao sớm hoặc số lượng nhiều.",TRUE,TRUE,20
-banh-bao,Bánh bao,Bánh Bao,cái,,product-banh-bao.jpg,"Bánh bao mềm, nhân đậm đà.","Bánh bao nhân mặn, vỏ mềm — tiện mang đi hoặc dùng kèm buổi sáng. Hỗ trợ đặt theo suất cho quán.",TRUE,TRUE,30
-banh-bao-tuoi,Bánh bao tươi,Bánh Bao,cái,,product-banh-bao-tuoi.jpg,Hấp mới mỗi ngày — mang đi tiện.,Hấp mới theo ngày bán. Giữ độ ẩm và hương vị tốt nhất khi dùng trong ngày.,TRUE,TRUE,40
-da-bao,Da bao,Các món ăn kèm,cái,,product-da-bao.jpg,Da bao tự làm tại tiệm — dùng kèm hoặc bán lẻ.,"Da bao do tiệm làm, nguồn gốc rõ — dùng kèm bánh mì hoặc bán lẻ theo yêu cầu.",FALSE,TRUE,50
-sandwich-ngot,Sandwich ngọt,Sandwich - Hot dog - Burger,cái,,product-sandwich-ngot.jpg,Vị ngọt nhẹ — phù hợp ăn sáng hoặc trà chiều.,"Sandwich vị ngọt dịu, đóng gói mang đi tiện. Phù hợp văn phòng hoặc set trà chiều.",FALSE,TRUE,60
-sandwich-lat,Sandwich lạt,Sandwich - Hot dog - Burger,cái,,product-sandwich-lat.jpg,Nhân mặn cân bằng — mang đi tiện.,"Sandwich nhân mặn cân bằng, no bụng — lựa chọn nhanh cho bữa sáng hoặc trưa nhẹ.",FALSE,TRUE,70
-sandwich-nguyen-cam,Sandwich nguyên cám,Sandwich - Hot dog - Burger,cái,,product-sandwich-nguyen-cam.jpg,Bánh nguyên cám — lựa chọn nhẹ bụng hơn.,Làm trên nền bánh nguyên cám — lựa chọn cho khách thích vị thanh và ít ngọt hơn.,FALSE,TRUE,80
-cha-gio,Chả giò,Các món ăn kèm,phần,,product-cha-gio.jpg,"Giòn ngoài, đậm đà bên trong.","Chả giò chiên giòn, phù hợp dùng kèm hoặc bán theo phần. Đặt trước để giữ suất nóng.",FALSE,TRUE,90
-banh-gio,Bánh giò,Các món ăn kèm,cái,,product-banh-gio.jpg,"Bánh giò thơm, nhân truyền thống.",Bánh giò nhân truyền thống — tiện mang đi buổi sáng. Có thể đặt theo số lượng.,FALSE,TRUE,100
-cha-lua,Chả lụa,Các món ăn kèm,ký,,product-cha-lua.jpg,Chả lụa tự làm — cắt sẵn hoặc theo yêu cầu.,Chả lụa tự làm tại tiệm — cắt sẵn hoặc theo độ dày yêu cầu. Phù hợp dùng kèm bánh mì hoặc bán lẻ.,FALSE,TRUE,110
-xoi,Xôi,Các món ăn kèm,bịch,,product-xoi.jpg,"Xôi mang đi — no bụng, tiện sáng sớm.","Xôi mang đi, no và tiện cho buổi sáng sớm. Liên hệ để chọn loại / số suất theo ngày.",FALSE,TRUE,120
+﻿id,name,category,unit,price,image,desc,detail,bestseller,active,sort,promote
+banh-mi,Bánh mì,Bánh Mì,ổ,4.000,product-banh-mi.jpg,"Ổ bánh cổ điển — vỏ giòn, ruột mềm.","Ổ bánh mì truyền thống của tiệm — phù hợp ăn kèm pate, chả, rau hoặc dùng làm nền cho nhiều kiểu nhân. Có thể đặt lẻ hoặc số lượng lớn cho quán.",TRUE,TRUE,10,FALSE
+banh-mi-tuoi,Bánh mì tươi,Bánh Mì,ổ,40.000,product-banh-mi-tuoi.jpg,Mới ra lò trong ngày — nóng và thơm.,"Bánh mì vừa nướng trong ngày, giữ độ nóng giòn. Nên đặt trước nếu cần giao sớm hoặc số lượng nhiều.",TRUE,TRUE,20,FALSE
+banh-bao,Bánh bao,Bánh Bao,cái,,product-banh-bao.jpg,"Bánh bao mềm, nhân đậm đà.","Bánh bao nhân mặn, vỏ mềm — tiện mang đi hoặc dùng kèm buổi sáng. Hỗ trợ đặt theo suất cho quán.",TRUE,TRUE,30,FALSE
+banh-bao-tuoi,Bánh bao tươi,Bánh Bao,cái,,product-banh-bao-tuoi.jpg,Hấp mới mỗi ngày — mang đi tiện.,Hấp mới theo ngày bán. Giữ độ ẩm và hương vị tốt nhất khi dùng trong ngày.,TRUE,TRUE,40,FALSE
+da-bao,Da bao,Các món ăn kèm,cái,,product-da-bao.jpg,Da bao tự làm tại tiệm — dùng kèm hoặc bán lẻ.,"Da bao do tiệm làm, nguồn gốc rõ — dùng kèm bánh mì hoặc bán lẻ theo yêu cầu.",FALSE,TRUE,50,FALSE
+sandwich-ngot,Sandwich ngọt,Sandwich - Hot dog - Burger,cái,,product-sandwich-ngot.jpg,Vị ngọt nhẹ — phù hợp ăn sáng hoặc trà chiều.,"Sandwich vị ngọt dịu, đóng gói mang đi tiện. Phù hợp văn phòng hoặc set trà chiều.",FALSE,TRUE,60,FALSE
+sandwich-lat,Sandwich lạt,Sandwich - Hot dog - Burger,cái,,product-sandwich-lat.jpg,Nhân mặn cân bằng — mang đi tiện.,"Sandwich nhân mặn cân bằng, no bụng — lựa chọn nhanh cho bữa sáng hoặc trưa nhẹ.",FALSE,TRUE,70,FALSE
+sandwich-nguyen-cam,Sandwich nguyên cám,Sandwich - Hot dog - Burger,cái,,product-sandwich-nguyen-cam.jpg,Bánh nguyên cám — lựa chọn nhẹ bụng hơn.,Làm trên nền bánh nguyên cám — lựa chọn cho khách thích vị thanh và ít ngọt hơn.,FALSE,TRUE,80,FALSE
+cha-gio,Chả giò,Các món ăn kèm,phần,,product-cha-gio.jpg,"Giòn ngoài, đậm đà bên trong.","Chả giò chiên giòn, phù hợp dùng kèm hoặc bán theo phần. Đặt trước để giữ suất nóng.",FALSE,TRUE,90,FALSE
+banh-gio,Bánh giò,Các món ăn kèm,cái,,product-banh-gio.jpg,"Bánh giò thơm, nhân truyền thống.",Bánh giò nhân truyền thống — tiện mang đi buổi sáng. Có thể đặt theo số lượng.,FALSE,TRUE,100,FALSE
+cha-lua,Chả lụa,Các món ăn kèm,ký,,product-cha-lua.jpg,Chả lụa tự làm — cắt sẵn hoặc theo yêu cầu.,Chả lụa tự làm tại tiệm — cắt sẵn hoặc theo độ dày yêu cầu. Phù hợp dùng kèm bánh mì hoặc bán lẻ.,FALSE,TRUE,110,FALSE
+xoi,Xôi,Các món ăn kèm,bịch,,product-xoi.jpg,"Xôi mang đi — no bụng, tiện sáng sớm.","Xôi mang đi, no và tiện cho buổi sáng sớm. Liên hệ để chọn loại / số suất theo ngày.",FALSE,TRUE,120,FALSE

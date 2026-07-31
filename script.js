@@ -1154,6 +1154,7 @@
       desc: String(row.desc || "").trim(),
       detail: String(row.detail || "").trim(),
       bestseller: isTruthyFlag(row.bestseller),
+      promote: isTruthyFlag(row.promote),
       sort: Number.parseInt(String(row.sort || "0"), 10) || 0,
       nameKey,
       descKey: nameKey ? `${nameKey}.desc` : "",
@@ -1250,6 +1251,13 @@
             const title = escapeHtml(categoryLabel(category));
             const cards = groups
               .get(category)
+              .slice()
+              .sort(
+                (a, b) =>
+                  Number(b.promote) - Number(a.promote) ||
+                  a.sort - b.sort ||
+                  a.name.localeCompare(b.name, "vi")
+              )
               .map((p) => productCardHtml(p, "h4"))
               .join("");
             return `<div class="product-category">
@@ -1434,6 +1442,7 @@
           desc: descNode?.textContent?.trim() || "",
           detail: "",
           bestseller: false,
+          promote: false,
           sort: 0,
           nameKey: "",
           descKey: "",

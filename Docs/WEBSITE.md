@@ -50,8 +50,11 @@ Sheet đang dùng:
 | `bestseller` | Có | `TRUE` / `FALSE` | `TRUE` |
 | `active` | Có | `TRUE` = hiện web | `TRUE` |
 | `sort` | Có | Thứ tự | `10` |
+| `promote` | Tuỳ | `TRUE` = luôn đứng đầu trong category | `FALSE` |
 
 Giá trống → hiện **Liên hệ**. Giá số → hiện dạng `15.000đ`.
+
+Trong mỗi category: món `promote=TRUE` xếp đầu **list món của category đó**. Thứ tự các category không đổi.
 
 **Phân nhóm trên web = cột `category`.**  
 Cùng một chữ category → cùng một mục (vd. `Bánh Mì`, `Bánh Bao`, `Các món ăn kèm`). Đổi tên sản phẩm **không** đổi nhóm — phải sửa cột `category`.
