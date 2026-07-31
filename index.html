@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Bánh Mì Đakao — bánh mì, bánh bao, sandwich, chả lụa. Ăn ngon mỗi ngày. Hơn 30 năm bánh tươi." />
+  <title>Bánh Mì Đakao — Ăn ngon mỗi ngày</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml" />
+</head>
+<body>
+  <!--
+    === EDIT NHANH (đồng bộ toàn trang) ===
+    SĐT hiển thị: 0907 827 072
+    SĐT tel link:  tel:+84907827072
+    Zalo link:     https://zalo.me/0907827072
+    Địa chỉ:       18 Ngô Tất Tố, phường Thạnh Mỹ Tây, thành phố Hồ Chí Minh
+    Giờ mở cửa:    05:00 – 20:00 (hàng ngày)
+    Hướng dẫn:     Docs/WEBSITE.md
+  -->
+
+  <a class="skip-link" href="#main" data-i18n="skip">Bỏ qua điều hướng</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="logo" href="#top" aria-label="Bánh Mì Đakao">
+        <img src="assets/logo-mark.svg" alt="" width="40" height="40" />
+        <span class="logo-text">
+          <span class="logo-name">Bánh Mì Đakao</span>
+          <span class="logo-tag" data-i18n="slogan">Ăn ngon mỗi ngày</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <a href="#gioi-thieu" data-i18n="nav.about">Giới thiệu</a>
+        <a href="#san-pham" data-i18n="nav.products">Sản phẩm</a>
+        <a href="#lien-he" data-i18n="nav.contact">Liên hệ</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn is-active" data-lang="vi" aria-pressed="true">VI</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <!-- === EDIT: SĐT / Zalo (header) === -->
+        <a class="btn btn-ghost header-zalo" href="https://zalo.me/0907827072" target="_blank" rel="noopener noreferrer">Zalo</a>
+        <a class="btn btn-primary header-call" href="tel:+84907827072" data-i18n="cta.call">Gọi ngay</a>
+      </div>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" data-i18n-aria="nav.menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
+      </button>
+
+      <button type="button" class="btn btn-ghost header-cart" id="cart-open" data-i18n-aria="cart.open">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2Zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2ZM7.2 14h9.9c.75 0 1.4-.41 1.74-1.03l3.58-6.49A1 1 0 0 0 21.55 5H6.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44A2 2 0 0 0 7.2 18H19v-2H7.42l.78-1.42Z"/></svg>
+        <span data-i18n="cart.openShort">Giỏ</span>
+        <span class="cart-badge" id="cart-badge" hidden>0</span>
+      </button>
+    </div>
+
+    <div id="mobile-nav" class="mobile-nav" hidden>
+      <a href="#gioi-thieu" data-i18n="nav.about">Giới thiệu</a>
+      <a href="#san-pham" data-i18n="nav.products">Sản phẩm</a>
+      <a href="#giao-hang" data-i18n="nav.delivery">Giao hàng</a>
+      <a href="#lien-he" data-i18n="nav.contact">Liên hệ</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- === EDIT: Hero === -->
+    <section id="top" class="hero" aria-labelledby="hero-brand">
+      <div class="hero-media media-slot" data-ph="Hero">
+        <img src="assets/hero.jpg" alt="" width="1920" height="1080" />
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="shell hero-content">
+        <p class="hero-kicker" data-i18n="hero.kicker">Tiệm bánh · Hơn 30 năm</p>
+        <h1 id="hero-brand" class="hero-brand">Bánh Mì Đakao</h1>
+        <p class="hero-slogan" data-i18n="slogan">Ăn ngon mỗi ngày</p>
+        <p class="hero-lead" data-i18n="hero.lead">Bánh tươi mỗi sáng — phục vụ khách lẻ và đơn số lượng lớn. Gọi, nhắn Zalo hoặc đặt online.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#san-pham" data-i18n="cta.products">Xem sản phẩm</a>
+          <button type="button" class="btn btn-light" data-open-cart data-i18n="cta.order">Đặt hàng online</button>
+          <a class="btn btn-outline-light" href="tel:+84907827072" data-i18n="cta.call">Gọi ngay</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- === EDIT: Giới thiệu === -->
+    <section id="gioi-thieu" class="section about" aria-labelledby="about-title">
+      <div class="shell about-grid">
+        <div class="about-visual media-slot ratio-4x3" data-ph="About">
+          <img src="assets/about.jpg" alt="" width="960" height="720" loading="lazy" />
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow" data-i18n="about.eyebrow">Về chúng tôi</p>
+          <h2 id="about-title" data-i18n="about.title">Giới thiệu Bánh Mì Đakao</h2>
+          <p class="lead" data-i18n="about.body">Hơn 30 năm gắn với từng ổ bánh nóng mỗi sáng, Bánh Mì Đakao giữ một điều giản dị: làm mới mỗi ngày để bạn ăn ngon mỗi ngày — từ khách ghé quán đến đơn sỉ cho quầy.</p>
+
+          <h3 class="why-title" data-i18n="why.title">Vì sao chọn chúng tôi</h3>
+          <ul class="why-list">
+            <li>
+              <strong data-i18n="why.1.title">Bánh tươi mới mỗi ngày</strong>
+              <span data-i18n="why.1.body">Nướng và chế biến theo ngày bán, giữ độ nóng giòn.</span>
+            </li>
+            <li>
+              <strong data-i18n="why.2.title">Đồ kèm tự làm, nguồn gốc rõ</strong>
+              <span data-i18n="why.2.body">Da bao, chả lụa và món kèm do tiệm làm — rõ nguồn, ổn định chất lượng.</span>
+            </li>
+            <li>
+              <strong data-i18n="why.3.title">Nhận lẻ, sỉ và đặt trước</strong>
+              <span data-i18n="why.3.body">Phục vụ khách mang đi lẫn đơn số lượng lớn cho quầy.</span>
+            </li>
+            <li>
+              <strong data-i18n="why.4.title">Giao gần miễn phí</strong>
+              <span data-i18n="why.4.body">Miễn phí trong 3km với đơn từ 300.000đ; giao rộng hơn qua app đặt hàng.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- === EDIT: Feedback khách hàng === -->
+    <section id="feedback" class="section feedback" aria-labelledby="feedback-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="feedback.eyebrow">Khách hàng nói gì</p>
+            <h2 id="feedback-title" data-i18n="feedback.title">Phản hồi từ khách</h2>
+          </div>
+          <div class="carousel-nav">
+            <button type="button" class="carousel-btn" data-carousel-prev aria-label="Previous">
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button type="button" class="carousel-btn" data-carousel-next aria-label="Next">
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel" data-carousel>
+          <div class="carousel-track" data-carousel-track>
+            <article class="feedback-card">
+              <div class="stars" aria-label="5/5">★★★★★</div>
+              <p data-i18n="feedback.1.text">“Bánh nóng mỗi sáng, giao đúng giờ cho quán mình. Đã đặt sỉ nhiều năm.”</p>
+              <footer>
+                <strong data-i18n="feedback.1.name">Chị Lan</strong>
+                <span data-i18n="feedback.1.meta">Chủ quán ăn sáng</span>
+              </footer>
+            </article>
+            <article class="feedback-card">
+              <div class="stars" aria-label="5/5">★★★★★</div>
+              <p data-i18n="feedback.2.text">“Ổ bánh giòn, nhân đầy đặn. Gia đình mình hay gọi mang về cuối tuần.”</p>
+              <footer>
+                <strong data-i18n="feedback.2.name">Anh Minh</strong>
+                <span data-i18n="feedback.2.meta">Khách thường xuyên</span>
+              </footer>
+            </article>
+            <article class="feedback-card">
+              <div class="stars" aria-label="5/5">★★★★★</div>
+              <p data-i18n="feedback.3.text">“Chả lụa và da bao tự làm rất ổn — đặt số lượng lớn vẫn đều chất lượng.”</p>
+              <footer>
+                <strong data-i18n="feedback.3.name">Quán Phở Hương</strong>
+                <span data-i18n="feedback.3.meta">Khách sỉ</span>
+              </footer>
+            </article>
+            <article class="feedback-card">
+              <div class="stars" aria-label="5/5">★★★★★</div>
+              <p data-i18n="feedback.4.text">“Nhân viên dễ nói, đặt qua Zalo nhanh. Sandwich nguyên cám cũng ngon.”</p>
+              <footer>
+                <strong data-i18n="feedback.4.name">Bạn Thu</strong>
+                <span data-i18n="feedback.4.meta">Văn phòng gần tiệm</span>
+              </footer>
+            </article>
+            <article class="feedback-card">
+              <div class="stars" aria-label="5/5">★★★★★</div>
+              <p data-i18n="feedback.5.text">“Hơn 30 năm mà vẫn giữ được cảm giác bánh nhà — đáng tin để đặt hàng ngày.”</p>
+              <footer>
+                <strong data-i18n="feedback.5.name">Chú Hùng</strong>
+                <span data-i18n="feedback.5.meta">Khách lâu năm</span>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === EDIT: Best sellers === -->
+    <section id="best-sellers" class="section bestsellers" aria-labelledby="best-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="best.eyebrow">Bán chạy</p>
+            <h2 id="best-title" data-i18n="best.title">Món được yêu thích</h2>
+          </div>
+          <a class="text-link" href="#san-pham" data-i18n="best.seeAll">Xem tất cả sản phẩm →</a>
+        </div>
+        <ul class="product-grid best-grid" id="best-sellers-grid" data-catalog="bestsellers">
+          <li class="catalog-loading" data-i18n="catalog.loading">Đang tải sản phẩm…</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- === EDIT: Danh mục sản phẩm === -->
+    <section id="san-pham" class="section products" aria-labelledby="products-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="products.eyebrow">Thực đơn</p>
+            <h2 id="products-title" data-i18n="products.title">Danh mục sản phẩm</h2>
+          </div>
+          <div class="section-head-actions">
+            <a class="btn btn-primary" href="tel:+84907827072" data-i18n="cta.callOrder">Gọi đặt hàng</a>
+            <a class="btn btn-outline" href="https://zalo.me/0907827072" target="_blank" rel="noopener noreferrer" data-i18n="cta.zalo">Nhắn Zalo</a>
+          </div>
+        </div>
+        <p class="lead products-lead" data-i18n="products.lead">Giá cập nhật theo ngày — vui lòng liên hệ để xác nhận còn hàng và báo giá.</p>
+        <p class="catalog-error" id="catalog-error" hidden></p>
+        <div id="product-categories" data-catalog="categories">
+          <p class="catalog-loading" data-i18n="catalog.loading">Đang tải sản phẩm…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- === EDIT: Giao hàng / sỉ === -->
+    <section id="giao-hang" class="section delivery" aria-labelledby="delivery-title">
+      <div class="shell delivery-panel reveal">
+        <div>
+          <p class="eyebrow" data-i18n="delivery.eyebrow">Giao hàng &amp; đặt sỉ</p>
+          <h2 id="delivery-title" data-i18n="delivery.title">Giao tận nơi — nhận đơn lớn</h2>
+          <p class="lead" data-i18n="delivery.lead">Đặt trước trong ngày để giữ suất bánh tươi. Hỗ trợ khách lẻ và đại lý / quán.</p>
+        </div>
+        <ul class="delivery-points">
+          <li data-i18n="delivery.1">Miễn phí giao trong phạm vi 3km với đơn từ 300.000đ</li>
+          <li data-i18n="delivery.2">Giao toàn thành phố qua các ứng dụng đặt hàng</li>
+          <li data-i18n="delivery.3">Nhận đặt trước và đơn số lượng lớn — gọi hoặc Zalo để báo giá</li>
+        </ul>
+        <div class="delivery-actions">
+          <button type="button" class="btn btn-primary" data-open-cart data-i18n="cta.order">Đặt hàng online</button>
+          <a class="btn btn-outline" href="https://zalo.me/0907827072" target="_blank" rel="noopener noreferrer">Zalo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- === EDIT: Liên hệ === -->
+    <section id="lien-he" class="section contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="contact.eyebrow">Kết nối</p>
+            <h2 id="contact-title" data-i18n="contact.title">Liên hệ &amp; bản đồ</h2>
+          </div>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-panel">
+            <p class="lead" data-i18n="contact.pitch">Gọi hoặc nhắn Zalo để hỏi hàng còn, đặt trước hoặc nhận đường đến cửa hàng.</p>
+            <dl class="contact-list">
+              <div>
+                <dt data-i18n="contact.phone">Điện thoại</dt>
+                <dd><a href="tel:+84907827072">0907 827 072</a></dd>
+              </div>
+              <div>
+                <dt data-i18n="contact.address">Địa chỉ</dt>
+                <dd>18 Ngô Tất Tố, phường Thạnh Mỹ Tây, thành phố Hồ Chí Minh</dd>
+              </div>
+              <div>
+                <dt data-i18n="contact.hours">Giờ mở cửa</dt>
+                <dd data-i18n="contact.hoursValue">05:00 – 20:00 (hàng ngày)</dd>
+              </div>
+              <div>
+                <dt>Zalo</dt>
+                <dd><a href="https://zalo.me/0907827072" target="_blank" rel="noopener noreferrer">0907 827 072</a></dd>
+              </div>
+            </dl>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="tel:+84907827072" data-i18n="cta.call">Gọi ngay</a>
+              <a class="btn btn-outline" href="https://zalo.me/0907827072" target="_blank" rel="noopener noreferrer" data-i18n="cta.zalo">Nhắn Zalo</a>
+            </div>
+          </div>
+
+          <div class="contact-map">
+            <iframe
+              title="Bản đồ Bánh Mì Đakao — 18 Ngô Tất Tố"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=18+Ng%C3%B4+T%E1%BA%A5t+T%E1%BB%91,+ph%C6%B0%E1%BB%9Dng+Th%E1%BA%A1nh+M%E1%BB%B9+T%C3%A2y,+th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh&hl=vi&z=16&output=embed"
+              allowfullscreen
+            ></iframe>
+            <a
+              class="map-link"
+              href="https://maps.google.com/maps?q=18+Ng%C3%B4+T%E1%BA%A5t+T%E1%BB%91,+ph%C6%B0%E1%BB%9Dng+Th%E1%BA%A1nh+M%E1%BB%B9+T%C3%A2y,+th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="contact.map"
+            >Mở trên Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top">
+          <img src="assets/logo-mark.svg" alt="" width="36" height="36" />
+          <span>Bánh Mì Đakao</span>
+        </a>
+        <p data-i18n="slogan">Ăn ngon mỗi ngày</p>
+      </div>
+      <div>
+        <h3 data-i18n="footer.explore">Khám phá</h3>
+        <ul>
+          <li><a href="#gioi-thieu" data-i18n="nav.about">Giới thiệu</a></li>
+          <li><a href="#san-pham" data-i18n="nav.products">Sản phẩm</a></li>
+          <li><a href="#lien-he" data-i18n="nav.contact">Liên hệ</a></li>
+        </ul>
+      </div>
+      <!-- === EDIT: SĐT / địa chỉ (footer) === -->
+      <div>
+        <h3 data-i18n="nav.contact">Liên hệ</h3>
+        <ul>
+          <li><a href="tel:+84907827072">0907 827 072</a></li>
+          <li><a href="https://zalo.me/0907827072" target="_blank" rel="noopener noreferrer">Zalo: 0907 827 072</a></li>
+          <li>18 Ngô Tất Tố, Thạnh Mỹ Tây, TP.HCM</li>
+          <li data-i18n="contact.hoursValue">05:00 – 20:00 (hàng ngày)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <p>© <span id="year"></span> Bánh Mì Đakao</p>
+    </div>
+  </footer>
+
+  <div class="fab-stack" aria-label="Quick contact">
+    <!-- === EDIT: SĐT / Zalo (nút nổi) === -->
+    <a class="fab fab-call" href="tel:+84907827072" data-i18n-aria="cta.call">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3.2c.4-.4 1-.5 1.5-.3l2.4 1c.5.2.8.7.8 1.2v2.3c0 .4-.2.8-.6 1-.7.5-1 1.2-.8 2 .5 1.8 1.9 3.2 3.7 3.7.8.2 1.5-.1 2-.8.2-.4.6-.6 1-.6h2.3c.5 0 1 .3 1.2.8l1 2.4c.2.5.1 1.1-.3 1.5-1.2 1.2-3 1.8-4.8 1.5C9.6 18.3 5.7 14.4 4.1 9c-.3-1.8.3-3.6 1.5-4.8Z"/></svg>
+      <span data-i18n="cta.callShort">Gọi</span>
+    </a>
+    <a class="fab fab-zalo" href="https://zalo.me/0907827072" target="_blank" rel="noopener noreferrer" aria-label="Zalo">
+      <span class="fab-zalo-mark" aria-hidden="true">Z</span>
+      <span>Zalo</span>
+    </a>
+  </div>
+
+  <!-- Cart drawer -->
+  <div class="cart-drawer" id="cart-drawer" hidden>
+    <div class="cart-drawer-backdrop" data-cart-close tabindex="-1"></div>
+    <div
+      class="cart-drawer-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cart-title"
+      tabindex="-1"
+    >
+      <header class="cart-drawer-head">
+        <div>
+          <p class="eyebrow" data-i18n="cart.eyebrow">Đơn của bạn</p>
+          <h2 id="cart-title" data-i18n="cart.title">Giỏ hàng</h2>
+        </div>
+        <button type="button" class="product-modal-close" data-cart-close data-i18n-aria="cart.close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </header>
+      <p class="cart-empty" id="cart-empty" data-i18n="cart.empty">Giỏ hàng đang trống. Chọn món và bấm “Thêm vào giỏ”.</p>
+      <div class="cart-list-scroll" id="cart-list-wrap" hidden>
+        <ul class="cart-list" id="cart-list"></ul>
+      </div>
+      <div class="cart-footer" id="cart-footer" hidden>
+        <div class="cart-note-field" id="cart-note-wrap">
+          <label for="cart-note" data-i18n="cart.note">Ghi chú (tuỳ chọn)</label>
+          <textarea id="cart-note" name="cart_note" rows="2"></textarea>
+        </div>
+        <div class="cart-total-row">
+          <span data-i18n="cart.total">Tổng cộng</span>
+          <strong id="cart-total">0đ</strong>
+        </div>
+        <p class="form-status" id="cart-status" role="status" aria-live="polite" hidden></p>
+        <div class="cart-drawer-actions" id="cart-actions">
+          <button type="button" class="btn btn-primary btn-block" id="cart-confirm" data-i18n="cart.confirm">
+            Xác nhận gửi Zalo
+          </button>
+          <button type="button" class="btn btn-outline btn-block" id="cart-clear" data-i18n="cart.clear">
+            Xóa giỏ hàng
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === EDIT: Modal chi tiết sản phẩm === -->
+  <div class="product-modal" id="product-modal" hidden>
+    <div class="product-modal-backdrop" data-modal-close tabindex="-1"></div>
+    <div
+      class="product-modal-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="product-modal-title"
+      tabindex="-1"
+    >
+      <button type="button" class="product-modal-close" data-modal-close data-i18n-aria="productModal.close">
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="product-modal-grid">
+        <div class="media-slot ratio-1x1 product-modal-media" id="product-modal-media" data-ph="">
+          <img id="product-modal-img" alt="" width="600" height="600" />
+        </div>
+        <div class="product-modal-copy">
+          <p class="eyebrow" data-i18n="productModal.eyebrow">Chi tiết sản phẩm</p>
+          <h2 id="product-modal-title"></h2>
+          <p class="price product-modal-price" id="product-modal-price"></p>
+          <p class="lead" id="product-modal-desc"></p>
+          <p class="product-modal-detail" id="product-modal-detail"></p>
+          <div class="qty-unit-row">
+            <div class="qty-field">
+              <label for="product-modal-qty" data-i18n="productModal.qty">Số lượng</label>
+              <div class="qty-stepper">
+                <button type="button" class="qty-btn" id="product-modal-qty-minus" aria-label="−">−</button>
+                <input
+                  id="product-modal-qty"
+                  type="number"
+                  inputmode="numeric"
+                  min="1"
+                  step="1"
+                  value="1"
+                />
+                <button type="button" class="qty-btn" id="product-modal-qty-plus" aria-label="+">+</button>
+              </div>
+            </div>
+            <div class="unit-field">
+              <span class="field-label" data-i18n="productModal.unit">Đơn vị</span>
+              <p class="unit-text" id="product-modal-unit">ổ</p>
+            </div>
+          </div>
+          <div class="product-modal-actions">
+            <button type="button" class="btn btn-primary" id="product-modal-order" data-i18n="productModal.order">
+              Thêm vào giỏ
+            </button>
+            <button type="button" class="btn btn-outline" data-modal-close data-i18n="productModal.close">
+              Đóng
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
