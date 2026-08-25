@@ -225,7 +225,6 @@ h4,
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
   text-decoration: none;
   color: var(--ink);
   flex-shrink: 0;
@@ -235,24 +234,10 @@ h4,
   color: var(--ink);
 }
 
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-
-.logo-name {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: 1.05rem;
-}
-
-.logo-tag {
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.logo-img {
+  height: 2.4rem;
+  width: auto;
+  max-width: 11rem;
 }
 
 .nav {
@@ -432,9 +417,13 @@ h4,
 
 .hero-brand {
   margin: 0;
-  font-size: clamp(2.6rem, 8vw, 4.5rem);
-  color: #fff;
-  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  line-height: 0;
+}
+
+.hero-logo {
+  width: min(100%, 22rem);
+  height: auto;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
 }
 
 .hero-slogan {
@@ -940,6 +929,11 @@ h4,
 
 .footer-brand .logo:hover {
   color: #fff;
+}
+
+.footer-brand .logo-img {
+  height: 2.85rem;
+  max-width: 13rem;
 }
 
 .footer-brand p {
