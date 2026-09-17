@@ -67,6 +67,8 @@
       "about.title": "Giới thiệu Bánh Mì Đakao",
       "about.body":
         "Hơn 30 năm gắn với từng ổ bánh nóng mỗi sáng, Bánh Mì Đakao giữ một điều giản dị: làm mới mỗi ngày để bạn ăn ngon mỗi ngày — từ khách ghé quán đến đơn sỉ cho quầy.",
+      "about.gallery": "Ảnh giới thiệu",
+      "about.gallery.dot": "Ảnh",
       "why.title": "Vì sao chọn chúng tôi",
       "why.1.title": "Bánh tươi mới mỗi ngày",
       "why.1.body": "Nướng và chế biến theo ngày bán, giữ độ nóng giòn.",
@@ -273,6 +275,8 @@
       "about.title": "Meet Bánh Mì Đakao",
       "about.body":
         "For more than 30 years, Bánh Mì Đakao has stayed true to one simple promise: fresh every day, so you can eat well every day — whether you stop by or order wholesale.",
+      "about.gallery": "About photos",
+      "about.gallery.dot": "Photo",
       "why.title": "Why choose us",
       "why.1.title": "Fresh every day",
       "why.1.body": "Baked and prepared for the day — hot and crisp.",
@@ -618,6 +622,114 @@
   function initPageTabs() {
     applyPageFromHash();
     window.addEventListener("hashchange", applyPageFromHash);
+  }
+
+  function initAboutGallery() {
+    const root = document.querySelector("[data-about-gallery]");
+    const track = root?.querySelector("[data-about-gallery-track]");
+    const dotsHost = root?.querySelector("[data-about-gallery-dots]");
+    if (!root || !track) return;
+
+    const slides = Array.from(track.querySelectorAll(".about-gallery-slide"));
+    if (slides.length < 2) return;
+
+    const intervalMs = 5000;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let index = 0;
+    let timer = 0;
+    let paused = false;
+
+    root.setAttribute("role", "region");
+    root.setAttribute("aria-roledescription", "carousel");
+    root.setAttribute("aria-label", t("about.gallery"));
+
+    if (dotsHost) {
+      dotsHost.replaceChildren();
+      slides.forEach((_, i) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "about-gallery-dot";
+        btn.setAttribute("aria-label", `${t("about.gallery.dot")} ${i + 1}`);
+        btn.addEventListener("click", () => goTo(i, true));
+        dotsHost.append(btn);
+      });
+    }
+
+    function slideWidth() {
+      return track.clientWidth || 1;
+    }
+
+    function updateDots() {
+      dotsHost?.querySelectorAll(".about-gallery-dot").forEach((btn, i) => {
+        btn.classList.toggle("is-active", i === index);
+      });
+    }
+
+    function syncFromScroll() {
+      const next = Math.round(track.scrollLeft / slideWidth());
+      if (!Number.isFinite(next)) return;
+      index = Math.max(0, Math.min(slides.length - 1, next));
+      updateDots();
+    }
+
+    function goTo(next, fromUser) {
+      index = ((next % slides.length) + slides.length) % slides.length;
+      track.scrollTo({
+        left: index * slideWidth(),
+        behavior: fromUser || !reduceMotion ? "smooth" : "auto",
+      });
+      updateDots();
+      if (fromUser) restart();
+    }
+
+    function pageVisible() {
+      return document.body.dataset.page !== "products" && !document.hidden;
+    }
+
+    function tick() {
+      if (paused || !pageVisible()) return;
+      goTo(index + 1, false);
+    }
+
+    function stop() {
+      window.clearInterval(timer);
+      timer = 0;
+    }
+
+    function start() {
+      if (reduceMotion) return;
+      stop();
+      timer = window.setInterval(tick, intervalMs);
+    }
+
+    function restart() {
+      stop();
+      if (!paused && pageVisible()) start();
+    }
+
+    track.addEventListener("scroll", () => {
+      window.requestAnimationFrame(syncFromScroll);
+    });
+    track.addEventListener("pointerdown", () => {
+      paused = true;
+      stop();
+    });
+    const resume = () => {
+      paused = false;
+      restart();
+    };
+    track.addEventListener("pointerup", resume);
+    track.addEventListener("pointercancel", resume);
+    root.addEventListener("mouseenter", () => {
+      paused = true;
+      stop();
+    });
+    root.addEventListener("mouseleave", resume);
+    document.addEventListener("visibilitychange", restart);
+    window.addEventListener("hashchange", restart);
+
+    updateDots();
+    restart();
   }
 
   function initCarousel() {
@@ -1585,6 +1697,7 @@
     initImagePlaceholders();
     initMobileNav();
     initPageTabs();
+    initAboutGallery();
     initCarousel();
     initCart();
     initProductModal();

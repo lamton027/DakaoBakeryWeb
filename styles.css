@@ -592,6 +592,59 @@ h4,
   box-shadow: var(--shadow);
 }
 
+.about-gallery {
+  position: relative;
+  min-height: 0;
+  box-shadow: none;
+}
+
+.about-gallery-viewport {
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.about-gallery-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.about-gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.about-gallery-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  min-width: 100%;
+}
+
+.about-gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.about-gallery-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(42, 31, 24, 0.22);
+  cursor: pointer;
+}
+
+.about-gallery-dot.is-active {
+  background: var(--primary-dark);
+  transform: scale(1.15);
+}
+
 .why-title {
   margin: 2rem 0 0.85rem;
   font-size: 1.25rem;
