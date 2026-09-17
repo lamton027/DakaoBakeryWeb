@@ -561,6 +561,67 @@
     });
   }
 
+  function currentHash() {
+    return (location.hash || "").replace(/^#/, "");
+  }
+
+  function isProductsHash(hash) {
+    return hash === "san-pham" || hash === "best-sellers";
+  }
+
+  function isContactHash(hash) {
+    return hash === "lien-he" || hash === "giao-hang";
+  }
+
+  function updatePageNav(page, hash) {
+    document.querySelectorAll("[data-page-nav]").forEach((link) => {
+      const href = (link.getAttribute("href") || "").replace(/^#/, "");
+      let active = false;
+      if (page === "products") {
+        active = href === "san-pham";
+      } else if (isContactHash(hash)) {
+        active = href === "lien-he" || href === "giao-hang";
+      } else {
+        active = href === "gioi-thieu";
+      }
+      link.classList.toggle("is-active", active);
+      if (active) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
+  }
+
+  function applyPageFromHash() {
+    const hash = currentHash();
+    const home = document.getElementById("page-home");
+    const products = document.getElementById("page-products");
+    if (!home || !products) return;
+
+    const showProducts = isProductsHash(hash);
+    home.hidden = showProducts;
+    products.hidden = !showProducts;
+    document.body.dataset.page = showProducts ? "products" : "home";
+    updatePageNav(showProducts ? "products" : "home", hash);
+
+    const scrollId = hash && hash !== "top" ? hash : "";
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        if (scrollId && isContactHash(scrollId)) {
+          const el = document.getElementById(scrollId);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+            return;
+          }
+        }
+        window.scrollTo({ top: 0, behavior: "auto" });
+      });
+    });
+  }
+
+  function initPageTabs() {
+    applyPageFromHash();
+    window.addEventListener("hashchange", applyPageFromHash);
+  }
+
   function initCarousel() {
     const root = document.querySelector("[data-carousel]");
     if (!root) return;
@@ -1525,6 +1586,7 @@
     initYear();
     initImagePlaceholders();
     initMobileNav();
+    initPageTabs();
     initCarousel();
     initCart();
     initProductModal();
