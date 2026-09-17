@@ -120,6 +120,7 @@
       "catalog.error":
         "Không tải được danh mục. Kiểm tra kết nối hoặc thử tải lại trang.",
       "catalog.empty": "Chưa có sản phẩm.",
+      "best.badge": "Món yêu thích",
       "p.banhMi": "Bánh mì",
       "p.banhMi.desc": "Ổ bánh cổ điển — vỏ giòn, ruột mềm.",
       "p.banhMi.detail":
@@ -328,6 +329,7 @@
       "catalog.error":
         "Could not load the menu. Check your connection or refresh the page.",
       "catalog.empty": "No products yet.",
+      "best.badge": "Favorite",
       "p.banhMi": "Banh mi",
       "p.banhMi.desc": "Classic loaf — crisp crust, soft crumb.",
       "p.banhMi.detail":
@@ -1325,6 +1327,9 @@
       desc: String(row.desc || "").trim(),
       detail: String(row.detail || "").trim(),
       bestseller: isTruthyFlag(row.bestseller),
+      notify: Object.prototype.hasOwnProperty.call(row, "notify")
+        ? isTruthyFlag(row.notify)
+        : isTruthyFlag(row.bestseller),
       promote: isTruthyFlag(row.promote),
       sort: Number.parseInt(String(row.sort || "0"), 10) || 0,
       nameKey,
@@ -1379,9 +1384,14 @@
     const unit = escapeHtml(product.unit);
     const orderValue = escapeHtml(product.name);
 
+    const favMark = product.notify
+      ? `<span class="fav-mark" aria-label="${escapeHtml(t("best.badge"))}" title="${escapeHtml(t("best.badge"))}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>`
+      : "";
+
     return `<li class="product-item" data-product data-product-id="${escapeHtml(product.id)}" data-order-value="${orderValue}" data-unit="${unit}" tabindex="0" role="button" aria-haspopup="dialog">
       <div class="media-slot ratio-1x1" data-ph="${name}">
         <img src="${img}" alt="${name}" width="400" height="400" loading="lazy" />
+        ${favMark}
       </div>
       <${titleTag}>${name}</${titleTag}>
       <p>${desc}</p>
@@ -1613,6 +1623,7 @@
           desc: descNode?.textContent?.trim() || "",
           detail: "",
           bestseller: false,
+          notify: false,
           promote: false,
           sort: 0,
           nameKey: "",

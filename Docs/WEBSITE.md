@@ -47,7 +47,8 @@ Sheet đang dùng:
 | `image` | Có | File trong `Website/assets/` | `product-banh-mi.jpg` |
 | `desc` | Nên có | Mô tả ngắn | … |
 | `detail` | Tuỳ | Mô tả popup | … |
-| `bestseller` | Có | `TRUE` / `FALSE` | `TRUE` |
+| `bestseller` | Có | `TRUE` = hiện trong mục Món được yêu thích | `TRUE` |
+| `notify` | Tuỳ | `TRUE` = tim đỏ yêu thích trên ảnh món | `TRUE` |
 | `active` | Có | `TRUE` = hiện web | `TRUE` |
 | `sort` | Có | Thứ tự | `10` |
 | `promote` | Tuỳ | `TRUE` = luôn đứng đầu trong category | `FALSE` |
@@ -245,7 +246,7 @@ Sau khi sửa chữ VI trong HTML, **đồng bộ bản EN** trong `script.js` (
 
 ### 6.3. Best sellers
 
-Chỉ đánh dấu `bestseller=TRUE` trên Sheet (hoặc sửa khối best sellers nếu đang hardcode).
+Chỉ đánh dấu `bestseller=TRUE` trên Sheet để hiện trong mục Món được yêu thích. Tim đỏ trên ảnh món dùng cột `notify=TRUE`.
 
 ---
 
@@ -324,3 +325,4 @@ Upload **toàn bộ** `Website/` (`index.html`, `styles.css`, `script.js`, `asse
 
 - App Unity (quản lý bán hàng): `Docs/TINH_NANG.md`
 - Website quảng cáo **độc lập** với app — sửa website không ảnh hưởng dữ liệu bán hàng.
+- **Website đặt hàng khách + bảng nhận đơn realtime** (tách riêng): xem `Docs/ORDER_SYSTEM.md` và `Docs/ORDER_API.md` ở root repo.
