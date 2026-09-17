@@ -579,8 +579,6 @@
       let active = false;
       if (page === "products") {
         active = href === "san-pham";
-      } else if (isContactHash(hash)) {
-        active = href === "lien-he" || href === "giao-hang";
       } else {
         active = href === "gioi-thieu";
       }
