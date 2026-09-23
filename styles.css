@@ -277,14 +277,6 @@ h4,
   flex-shrink: 0;
 }
 
-/* Tight zone: header content does not fit, flexbox would squash the call
-   button out of proportion — hide it instead of letting it stretch. */
-@media (min-width: 800px) and (max-width: 1023px) {
-  .header-call {
-    display: none;
-  }
-}
-
 .header-cart {
   position: relative;
   display: inline-flex;
