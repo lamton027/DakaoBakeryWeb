@@ -14,8 +14,8 @@ Tài liệu này giúp bạn **tự sửa nội dung** trang quảng cáo mà kh
 | Màu chủ đạo | `#F4A261` |
 | Slogan | Ăn ngon mỗi ngày |
 
-> Việc hàng ngày: sửa **`index.html`**, đổi ảnh trong **`assets/`**, và (nếu cần) chuỗi EN trong **`script.js`**. Chỉ đụng `styles.css` khi đổi màu / layout.  
-> **Danh mục / giá:** sửa trên Google Sheet → lưu → refresh trang web (mục 0).
+> Việc hàng ngày: sửa danh mục, giá và ảnh sản phẩm trên Google Sheet rồi refresh trang web (mục 0).
+> Chỉ cần sửa file trong project khi thay giao diện, logo hoặc ảnh giới thiệu.
 
 ---
 
@@ -44,7 +44,7 @@ Sheet đang dùng:
 | `category` | Có | Nhóm | `Bánh mì` |
 | `unit` | Có | Đơn vị text | `ổ` |
 | `price` | Nên có | Số VND; trống = “Liên hệ” | `15000` hoặc `15.000` |
-| `image` | Có | File trong `Website/assets/` | `product-banh-mi.jpg` |
+| `image` | Có | Link chia sẻ Google Drive, URL ảnh công khai hoặc file trong `Website/assets/` | `https://drive.google.com/file/d/.../view` |
 | `desc` | Nên có | Mô tả ngắn | … |
 | `detail` | Tuỳ | Mô tả popup | … |
 | `bestseller` | Có | `TRUE` = hiện trong mục Món được yêu thích | `TRUE` |
@@ -67,17 +67,27 @@ Cùng một chữ category → cùng một mục (vd. `Bánh Mì`, `Bánh Bao`, 
 3. Không cần nhờ agent đồng bộ HTML nữa (trừ khi đổi sheet ID hoặc thêm cột mới).
 4. Nếu món nằm sai mục: sửa ô `category` của đúng hàng `id` (vd. `xoi`, `cha-lua` → `Các món ăn kèm`).
 
-### 0.4. Tạo Sheet lần đầu (nếu làm sheet mới)
+### 0.4. Đổi ảnh sản phẩm bằng Google Drive
+
+1. Upload ảnh mới lên Google Drive.
+2. Chọn **Share → Anyone with the link → Viewer** cho file ảnh.
+3. Copy link chia sẻ dạng `https://drive.google.com/file/d/FILE_ID/view?...`.
+4. Dán nguyên link vào cột `image` của đúng sản phẩm trên Sheet.
+5. Refresh website. Không cần copy ảnh vào project, commit hoặc deploy lại.
+
+Website tự chuyển link chia sẻ Google Drive thành URL ảnh. Có thể dùng URL ảnh công khai từ dịch vụ khác trong cùng cột `image`. Nếu cập nhật ảnh, nên upload thành file mới và dán link mới để tránh trình duyệt giữ ảnh cũ trong cache.
+
+### 0.5. Tạo Sheet lần đầu (nếu làm sheet mới)
 
 1. Mở [Google Sheets](https://sheets.google.com) → spreadsheet trống.
 2. **File → Import → Upload** → [`Docs/products-catalog.csv`](products-catalog.csv).
 3. **Share → Anyone with the link → Viewer**.
 4. Đưa `SHEET_ID` vào `Website/script.js` (`const SHEET_ID = "..."`).
 
-### 0.5. Fallback local
+### 0.6. Fallback local
 
 `Website/products-catalog.csv` dùng khi không fetch được Sheet (offline / CORS). Nên giữ file này gần giống Sheet.
-Ảnh vẫn do bạn bỏ vào `Website/assets/` đúng tên cột `image`.
+Nếu dùng fallback local, cột `image` vẫn có thể chứa link Google Drive, URL ảnh công khai hoặc tên file trong `Website/assets/`.
 
 ---
 
@@ -214,7 +224,8 @@ Sau khi sửa chữ VI trong HTML, **đồng bộ bản EN** trong `script.js` (
 | Sản phẩm | `product-....jpg` | vuông ~800×800 |
 | Logo | `logo.svg` / `logo-mark.svg` | SVG |
 
-- Đặt file đúng tên vào `Website/assets/` → trang tự hiện ảnh (không cần sửa HTML nếu giữ tên).
+- Ảnh sản phẩm: ưu tiên upload Google Drive rồi dán link chia sẻ vào cột `image` trên Sheet.
+- Logo / ảnh giới thiệu: đặt file đúng tên vào `Website/assets/`.
 - Nén ảnh nếu >1–2 MB.
 
 ---
@@ -238,11 +249,10 @@ Sau khi sửa chữ VI trong HTML, **đồng bộ bản EN** trong `script.js` (
 
 ### 6.2. Thêm món mới
 
-1. Thêm ảnh vào `assets/`.
-2. Copy một `product-item`, dán vào nhóm phù hợp trong `EDIT: Danh mục sản phẩm`.
-3. Đổi `src`, `data-ph`, `alt`, chữ, giá.
-4. Nếu dùng `data-i18n` mới: thêm key vào **cả** `i18n.vi` và `i18n.en` trong `script.js`.
-5. (Tuỳ chọn) Thêm món mới trên Google Sheet (`active=TRUE`).
+1. Thêm một hàng mới trên Google Sheet và đặt `active=TRUE`.
+2. Upload ảnh lên Google Drive, bật **Anyone with the link → Viewer** rồi dán link vào cột `image`.
+3. Điền `id`, tên, nhóm, đơn vị, giá và thứ tự hiển thị.
+4. Refresh website để kiểm tra. Không cần sửa HTML hoặc commit website.
 
 ### 6.3. Best sellers
 
@@ -314,7 +324,7 @@ Upload **toàn bộ** `Website/` (`index.html`, `styles.css`, `script.js`, `asse
 
 | Hiện tượng | Nguyên nhân | Cách xử lý |
 |---|---|---|
-| Ảnh không hiện, chỉ thấy chữ placeholder | Chưa có file / sai tên | Đặt đúng tên trong `assets/` |
+| Ảnh không hiện, chỉ thấy chữ placeholder | File Drive chưa bật quyền xem hoặc link sai | Bật **Anyone with the link → Viewer** rồi dán lại link file vào cột `image` |
 | Đổi VI nhưng EN vẫn cũ | Chưa sửa `script.js` | Đồng bộ key trong `i18n.en` |
 | Form không mở Zalo | Popup bị chặn / sai URL | Cho phép popup; kiểm tra `ZALO_URL` |
 | Layout rối | Xóa nhầm thẻ đóng | Undo hoặc copy lại từ git |

@@ -1301,9 +1301,28 @@
     return `${amount.toLocaleString("vi-VN")}đ`;
   }
 
+  function googleDriveImageUrl(value) {
+    try {
+      const url = new URL(value);
+      const host = url.hostname.toLowerCase();
+      if (host !== "drive.google.com" && host !== "docs.google.com") return "";
+
+      const pathMatch = url.pathname.match(/\/file\/d\/([a-z0-9_-]+)/i);
+      const fileId = String(pathMatch?.[1] || url.searchParams.get("id") || "").trim();
+      if (!/^[a-z0-9_-]{10,}$/i.test(fileId)) return "";
+
+      return `https://drive.google.com/thumbnail?id=${encodeURIComponent(fileId)}&sz=w1200`;
+    } catch (_) {
+      return "";
+    }
+  }
+
   function imageSrc(fileName) {
     const name = String(fileName || "").trim();
     if (!name) return "";
+
+    const driveImage = googleDriveImageUrl(name);
+    if (driveImage) return driveImage;
     if (/^https?:\/\//i.test(name) || name.startsWith("assets/")) return name;
     return `assets/${name}`;
   }
