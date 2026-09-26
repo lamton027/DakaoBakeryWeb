@@ -1687,6 +1687,35 @@ body.modal-open {
 }
 
 /* Brand refresh preview */
+.site-footer {
+  padding-top: 0;
+}
+
+.footer-contact {
+  margin-bottom: 3rem;
+  background:
+    radial-gradient(circle at 8% 15%, rgba(244, 162, 97, 0.14), transparent 30%),
+    var(--bg);
+  color: var(--ink);
+}
+
+.site-footer .footer-contact a:not(.btn) {
+  color: var(--primary-dark);
+}
+
+.site-footer .footer-contact a:not(.btn):hover {
+  color: var(--ink);
+}
+
+.site-footer .footer-contact .btn-outline {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.site-footer .footer-contact .btn-outline:hover {
+  color: #fff;
+}
+
 .hero {
   min-height: min(86vh, 760px);
   align-items: center;
