@@ -383,6 +383,56 @@ h4,
   background: rgba(244, 162, 97, 0.15);
 }
 
+@media (max-width: 799px) {
+  :root {
+    --header-h: 7.5rem;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 0.45rem 0.75rem;
+    padding-block: 0.45rem;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .header-cart {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .nav {
+    order: 3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 0.35rem;
+    margin-left: 0;
+    padding-top: 0.4rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .nav a {
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.7rem;
+    text-align: center;
+    box-shadow: none;
+  }
+
+  .nav a:hover,
+  .nav a.is-active {
+    background: rgba(244, 162, 97, 0.15);
+    box-shadow: none;
+  }
+
+  .nav-toggle,
+  .mobile-nav {
+    display: none !important;
+  }
+}
+
 .page-panel[hidden] {
   display: none !important;
 }
@@ -1588,7 +1638,7 @@ body.modal-open {
   }
 
   .nav-toggle {
-    display: inline-flex;
+    display: none;
   }
 
   .about-grid {
