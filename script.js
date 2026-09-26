@@ -80,15 +80,15 @@
         "Xem nhanh các món được yêu thích trước khi khám phá toàn bộ thực đơn.",
       "homeBest.link": "Xem toàn bộ thực đơn →",
       "story.eyebrow": "Câu chuyện Đakao",
-      "story.title": "Một tiệm bánh, một lời hứa giản dị",
+      "story.title": "Bánh tươi, vị quen mỗi ngày",
       "story.lead":
-        "Hơn 30 năm gắn với từng ổ bánh nóng mỗi sáng, Bánh Mì Đakao vẫn giữ một điều: chuẩn bị chỉn chu, làm mới mỗi ngày và phục vụ theo cách gần gũi nhất.",
+        "Hơn 30 năm, Bánh Mì Đakao vẫn làm bánh mới mỗi ngày, phục vụ từ bữa sáng mang đi đến đơn sỉ cho quán.",
       "story.1.title": "Giữ vị quen",
-      "story.1.body": "Ổ bánh giòn, ruột mềm và những món ăn sáng thân thuộc.",
+      "story.1.body": "Vỏ giòn, ruột mềm.",
       "story.2.title": "Làm mới mỗi ngày",
-      "story.2.body": "Bánh và món kèm được chuẩn bị theo ngày bán.",
-      "story.3.title": "Phục vụ linh hoạt",
-      "story.3.body": "Từ một phần mang đi đến đơn sỉ cho quán.",
+      "story.2.body": "Bánh và món kèm làm theo ngày bán.",
+      "story.3.title": "Lẻ & sỉ",
+      "story.3.body": "Mang đi hoặc đặt số lượng lớn.",
       "paths.eyebrow": "Bạn đang cần gì?",
       "paths.title": "Chọn cách đặt phù hợp",
       "paths.lead":
@@ -118,17 +118,6 @@
         "Hơn 30 năm gắn với từng ổ bánh nóng mỗi sáng, Bánh Mì Đakao giữ một điều giản dị: làm mới mỗi ngày để bạn ăn ngon mỗi ngày — từ khách ghé quán đến đơn sỉ cho quầy.",
       "about.gallery": "Ảnh giới thiệu",
       "about.gallery.dot": "Ảnh",
-      "why.title": "Vì sao chọn chúng tôi",
-      "why.1.title": "Bánh tươi mới mỗi ngày",
-      "why.1.body": "Nướng và chế biến theo ngày bán, giữ độ nóng giòn.",
-      "why.2.title": "Đồ kèm tự làm, nguồn gốc rõ",
-      "why.2.body":
-        "Da bao, chả lụa và món kèm do tiệm làm — rõ nguồn, ổn định chất lượng.",
-      "why.3.title": "Nhận lẻ, sỉ và đặt trước",
-      "why.3.body": "Phục vụ khách mang đi lẫn đơn số lượng lớn cho quầy.",
-      "why.4.title": "Giao gần miễn phí",
-      "why.4.body":
-        "Miễn phí trong 3km với đơn từ 300.000đ; giao rộng hơn qua app đặt hàng.",
       "feedback.eyebrow": "Khách hàng nói gì",
       "feedback.title": "Phản hồi từ khách",
       "feedback.1.text":
@@ -337,15 +326,15 @@
       "homeBest.lead": "A quick look at popular picks before you explore the full menu.",
       "homeBest.link": "Explore the full menu →",
       "story.eyebrow": "The Dakao story",
-      "story.title": "One bakery, one simple promise",
+      "story.title": "Fresh bread, familiar flavor",
       "story.lead":
-        "For more than 30 years, Bánh Mì Đakao has kept one promise: thoughtful preparation, fresh batches every day, and warm service.",
+        "For over 30 years, Bánh Mì Đakao has baked fresh daily, from takeaway breakfasts to wholesale orders.",
       "story.1.title": "Keep the familiar taste",
-      "story.1.body": "Crisp rolls, soft crumbs, and familiar breakfast favorites.",
+      "story.1.body": "Crisp outside, soft inside.",
       "story.2.title": "Made fresh daily",
-      "story.2.body": "Bread and sides are prepared for each day of service.",
-      "story.3.title": "Flexible service",
-      "story.3.body": "From one takeaway meal to wholesale orders for shops.",
+      "story.2.body": "Bread and sides prepared for the day.",
+      "story.3.title": "Retail & wholesale",
+      "story.3.body": "Take away or order in quantity.",
       "paths.eyebrow": "What do you need?",
       "paths.title": "Choose how you order",
       "paths.lead": "Whether it is one breakfast or regular stock for your shop, there is a clear way to order.",
@@ -373,17 +362,6 @@
         "For more than 30 years, Bánh Mì Đakao has stayed true to one simple promise: fresh every day, so you can eat well every day — whether you stop by or order wholesale.",
       "about.gallery": "About photos",
       "about.gallery.dot": "Photo",
-      "why.title": "Why choose us",
-      "why.1.title": "Fresh every day",
-      "why.1.body": "Baked and prepared for the day — hot and crisp.",
-      "why.2.title": "House-made sides, clear origins",
-      "why.2.body":
-        "Da bao, Vietnamese pork loaf, and sides made in-house — consistent quality.",
-      "why.3.title": "Retail, wholesale & pre-orders",
-      "why.3.body": "Takeaway for guests and bulk orders for shops.",
-      "why.4.title": "Free nearby delivery",
-      "why.4.body":
-        "Free within 3km for orders from 300,000đ; city-wide via delivery apps.",
       "feedback.eyebrow": "What guests say",
       "feedback.title": "Customer feedback",
       "feedback.1.text":
@@ -1445,6 +1423,7 @@
         ? isTruthyFlag(row.notify)
         : isTruthyFlag(row.bestseller),
       promote: isTruthyFlag(row.promote),
+      push: isTruthyFlag(row.PUSH ?? row.push),
       sort: Number.parseInt(String(row.sort || "0"), 10) || 0,
       nameKey,
       descKey: nameKey ? `${nameKey}.desc` : "",
@@ -1529,9 +1508,7 @@
     }
 
     if (homeBestGrid) {
-      const featured = products
-        .filter((p) => p.bestseller)
-        .slice(0, 3);
+      const featured = products;
       homeBestGrid.innerHTML = featured.length
         ? featured.map((p) => productCardHtml(p, "h3")).join("")
         : `<li class="catalog-loading" data-i18n="catalog.empty">${escapeHtml(t("catalog.empty"))}</li>`;
@@ -1573,6 +1550,34 @@
           .join("");
       }
     }
+  }
+
+  function renderStoryGallery(products) {
+    const track = document.querySelector("[data-about-gallery-track]");
+    if (!track) return;
+
+    const pushed = products.filter((product) => product.push && product.image);
+    if (!pushed.length) return;
+
+    track.innerHTML = pushed
+      .map((product) => {
+        const name = escapeHtml(product.name);
+        return `<li class="about-gallery-slide">
+          <div class="media-slot" data-ph="${name}">
+            <img src="${escapeHtml(product.image)}" alt="${name}" width="960" height="720" loading="lazy" />
+          </div>
+        </li>`;
+      })
+      .join("");
+
+    track.querySelectorAll("img").forEach((img) => {
+      const markMissing = () => img.setAttribute("data-missing", "");
+      if (img.complete && img.naturalWidth === 0) {
+        markMissing();
+      } else {
+        img.addEventListener("error", markMissing, { once: true });
+      }
+    });
   }
 
   function showCatalogError(message) {
@@ -1641,10 +1646,12 @@
           throw new Error("Empty catalog");
         }
 
+        renderStoryGallery(products);
         renderCatalog(products);
         applyI18n();
         wireCatalogImages();
         renderCart();
+        initAboutGallery();
         return;
       } catch (err) {
         lastError = err;
@@ -1665,6 +1672,7 @@
     }
     if (categoriesEl) categoriesEl.innerHTML = empty;
     applyI18n();
+    initAboutGallery();
   }
 
   function initProductModal() {
@@ -1836,7 +1844,6 @@
     initImagePlaceholders();
     initMobileNav();
     initPageTabs();
-    initAboutGallery();
     initCarousel();
     initCart();
     initProductModal();
