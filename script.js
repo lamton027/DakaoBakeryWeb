@@ -276,6 +276,11 @@
       "contact.pitch":
         "Gọi hoặc nhắn Zalo để hỏi hàng còn, đặt trước hoặc nhận đường đến cửa hàng.",
       "contact.phone": "Điện thoại - Zalo",
+      "contactChoice.eyebrow": "Liên hệ ngay",
+      "contactChoice.title": "Bạn muốn liên hệ bằng cách nào?",
+      "contactChoice.call": "Gọi điện",
+      "contactChoice.zalo": "Mở Zalo",
+      "contactChoice.close": "Đóng lựa chọn liên hệ",
       "contact.address": "Địa chỉ",
       "contact.hours": "Giờ mở cửa",
       "contact.hoursValue": "05:00 – 20:00 (hàng ngày)",
@@ -519,6 +524,11 @@
       "contact.pitch":
         "Call or message on Zalo to check stock, pre-order, or get directions.",
       "contact.phone": "Phone - Zalo",
+      "contactChoice.eyebrow": "Contact now",
+      "contactChoice.title": "How would you like to contact us?",
+      "contactChoice.call": "Call now",
+      "contactChoice.zalo": "Open Zalo",
+      "contactChoice.close": "Close contact options",
       "contact.address": "Address",
       "contact.hours": "Hours",
       "contact.hoursValue": "05:00 – 20:00 (daily)",
@@ -1838,6 +1848,40 @@
     });
   }
 
+  function initContactChoice() {
+    const modal = document.getElementById("contact-choice");
+    const trigger = document.querySelector("[data-contact-choice]");
+    const dialog = modal?.querySelector(".contact-choice-dialog");
+    if (!modal || !trigger) return;
+
+    function openChoice(event) {
+      event.preventDefault();
+      lastFocusedEl = document.activeElement;
+      modal.hidden = false;
+      document.body.classList.add("modal-open");
+      dialog?.focus();
+    }
+
+    function closeChoice() {
+      modal.hidden = true;
+      if (!isCartOpen() && document.getElementById("product-modal")?.hidden !== false) {
+        document.body.classList.remove("modal-open");
+      }
+      lastFocusedEl?.focus?.();
+    }
+
+    trigger.addEventListener("click", openChoice);
+    modal.querySelectorAll("[data-contact-choice-close]").forEach((element) => {
+      element.addEventListener("click", closeChoice);
+    });
+    modal.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeChoice);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !modal.hidden) closeChoice();
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initLang();
     initYear();
@@ -1847,6 +1891,7 @@
     initCarousel();
     initCart();
     initProductModal();
+    initContactChoice();
     loadCatalog();
   });
 })();

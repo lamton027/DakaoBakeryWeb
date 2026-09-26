@@ -1427,6 +1427,62 @@ body.modal-open {
   overflow: hidden;
 }
 
+.contact-choice[hidden] {
+  display: none;
+}
+
+.contact-choice {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.contact-choice-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(42, 31, 24, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.contact-choice-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 420px);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  text-align: center;
+  animation: rise 0.3s var(--ease) both;
+}
+
+.contact-choice-dialog h2 {
+  margin: 0.35rem 1.5rem 0;
+  font-size: clamp(1.35rem, 4vw, 1.7rem);
+}
+
+.contact-choice-number {
+  margin: 0.8rem 0 1.1rem;
+  color: var(--primary-dark);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.contact-choice-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+@media (max-width: 420px) {
+  .contact-choice-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
 .product-modal[hidden] {
   display: none;
 }
