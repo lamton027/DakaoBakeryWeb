@@ -1508,7 +1508,7 @@
     }
 
     if (homeBestGrid) {
-      const featured = products;
+      const featured = products.filter((product) => product.bestseller);
       homeBestGrid.innerHTML = featured.length
         ? featured.map((p) => productCardHtml(p, "h3")).join("")
         : `<li class="catalog-loading" data-i18n="catalog.empty">${escapeHtml(t("catalog.empty"))}</li>`;
