@@ -275,7 +275,7 @@
       "contact.title": "Liên hệ & bản đồ",
       "contact.pitch":
         "Gọi hoặc nhắn Zalo để hỏi hàng còn, đặt trước hoặc nhận đường đến cửa hàng.",
-      "contact.phone": "Điện thoại",
+      "contact.phone": "Điện thoại - Zalo",
       "contact.address": "Địa chỉ",
       "contact.hours": "Giờ mở cửa",
       "contact.hoursValue": "05:00 – 20:00 (hàng ngày)",
@@ -518,7 +518,7 @@
       "contact.title": "Contact & map",
       "contact.pitch":
         "Call or message on Zalo to check stock, pre-order, or get directions.",
-      "contact.phone": "Phone",
+      "contact.phone": "Phone - Zalo",
       "contact.address": "Address",
       "contact.hours": "Hours",
       "contact.hoursValue": "05:00 – 20:00 (daily)",
