@@ -62,6 +62,56 @@
       "hero.kicker": "Tiệm bánh · Hơn 30 năm",
       "hero.lead":
         "Bánh tươi mỗi sáng — phục vụ khách lẻ và đơn số lượng lớn. Gọi, nhắn Zalo hoặc đặt online.",
+      "brandHero.title1": "Bánh tươi mỗi sáng.",
+      "brandHero.title2": "Vị quen hơn 30 năm.",
+      "brandHero.lead":
+        "Từ ổ bánh nóng giòn đến món ăn sáng tiện lợi — làm mới mỗi ngày cho khách ghé tiệm và đơn số lượng lớn.",
+      "brandHero.zalo": "Đặt qua Zalo",
+      "brandHero.note": "Mở cửa mỗi ngày · 05:00–20:00 · 18 Ngô Tất Tố",
+      "proof.years": "Năm giữ vị bánh quen",
+      "proof.dailyTitle": "Mỗi ngày",
+      "proof.daily": "Bánh được làm mới",
+      "proof.morning": "Sẵn sàng cho buổi sáng",
+      "proof.retailTitle": "Lẻ & sỉ",
+      "proof.retail": "Nhận đặt trước số lượng lớn",
+      "homeBest.eyebrow": "Bắt đầu từ món quen",
+      "homeBest.title": "Những món khách thường chọn",
+      "homeBest.lead":
+        "Xem nhanh các món được yêu thích trước khi khám phá toàn bộ thực đơn.",
+      "homeBest.link": "Xem toàn bộ thực đơn →",
+      "story.eyebrow": "Câu chuyện Đakao",
+      "story.title": "Một tiệm bánh, một lời hứa giản dị",
+      "story.lead":
+        "Hơn 30 năm gắn với từng ổ bánh nóng mỗi sáng, Bánh Mì Đakao vẫn giữ một điều: chuẩn bị chỉn chu, làm mới mỗi ngày và phục vụ theo cách gần gũi nhất.",
+      "story.1.title": "Giữ vị quen",
+      "story.1.body": "Ổ bánh giòn, ruột mềm và những món ăn sáng thân thuộc.",
+      "story.2.title": "Làm mới mỗi ngày",
+      "story.2.body": "Bánh và món kèm được chuẩn bị theo ngày bán.",
+      "story.3.title": "Phục vụ linh hoạt",
+      "story.3.body": "Từ một phần mang đi đến đơn sỉ cho quán.",
+      "paths.eyebrow": "Bạn đang cần gì?",
+      "paths.title": "Chọn cách đặt phù hợp",
+      "paths.lead":
+        "Mua một bữa sáng hay chuẩn bị hàng đều đặn cho quán, chúng tôi đều có cách phục vụ rõ ràng.",
+      "paths.retail.eyebrow": "Khách mua lẻ",
+      "paths.retail.title": "Chọn món, đặt nhanh",
+      "paths.retail.lead": "Xem giá trong ngày, thêm món vào giỏ và gửi đơn trực tiếp qua Zalo.",
+      "paths.retail.1": "Mang đi tại cửa hàng",
+      "paths.retail.2": "Giao gần miễn phí theo điều kiện đơn",
+      "paths.retail.3": "Giao rộng hơn qua ứng dụng",
+      "paths.wholesale.eyebrow": "Quán & đại lý",
+      "paths.wholesale.title": "Đặt sỉ, giao đều",
+      "paths.wholesale.lead":
+        "Trao đổi số lượng, lịch giao và sản phẩm phù hợp với mô hình bán của bạn.",
+      "paths.wholesale.1": "Nhận đơn số lượng lớn",
+      "paths.wholesale.2": "Hỗ trợ đặt trước theo lịch",
+      "paths.wholesale.3": "Báo giá trực tiếp theo nhu cầu",
+      "paths.wholesale.cta": "Nhận báo giá sỉ",
+      "menuHero.eyebrow": "Thực đơn Đakao",
+      "menuHero.title": "Món quen cho mỗi buổi sáng",
+      "menuHero.lead": "Bánh mì, bánh bao, xôi và món ăn kèm — cập nhật trực tiếp từ cửa hàng.",
+      "menuHero.noteTitle": "Làm mới mỗi ngày",
+      "menuHero.note": "Liên hệ để xác nhận món còn và thời gian nhận.",
       "about.eyebrow": "Về chúng tôi",
       "about.title": "Giới thiệu Bánh Mì Đakao",
       "about.body":
@@ -270,6 +320,53 @@
       "hero.kicker": "Bakery · 30+ years",
       "hero.lead":
         "Fresh bread every morning — for walk-in guests and large orders. Call, Zalo, or order online.",
+      "brandHero.title1": "Fresh every morning.",
+      "brandHero.title2": "A familiar taste for 30+ years.",
+      "brandHero.lead":
+        "From crisp banh mi to easy breakfast favorites — made fresh daily for walk-in guests and larger orders.",
+      "brandHero.zalo": "Order on Zalo",
+      "brandHero.note": "Open daily · 05:00–20:00 · 18 Ngo Tat To",
+      "proof.years": "Years of familiar flavor",
+      "proof.dailyTitle": "Every day",
+      "proof.daily": "Bread is made fresh",
+      "proof.morning": "Ready for breakfast",
+      "proof.retailTitle": "Retail & wholesale",
+      "proof.retail": "Bulk pre-orders welcome",
+      "homeBest.eyebrow": "Start with a favorite",
+      "homeBest.title": "Guest favorites",
+      "homeBest.lead": "A quick look at popular picks before you explore the full menu.",
+      "homeBest.link": "Explore the full menu →",
+      "story.eyebrow": "The Dakao story",
+      "story.title": "One bakery, one simple promise",
+      "story.lead":
+        "For more than 30 years, Bánh Mì Đakao has kept one promise: thoughtful preparation, fresh batches every day, and warm service.",
+      "story.1.title": "Keep the familiar taste",
+      "story.1.body": "Crisp rolls, soft crumbs, and familiar breakfast favorites.",
+      "story.2.title": "Made fresh daily",
+      "story.2.body": "Bread and sides are prepared for each day of service.",
+      "story.3.title": "Flexible service",
+      "story.3.body": "From one takeaway meal to wholesale orders for shops.",
+      "paths.eyebrow": "What do you need?",
+      "paths.title": "Choose how you order",
+      "paths.lead": "Whether it is one breakfast or regular stock for your shop, there is a clear way to order.",
+      "paths.retail.eyebrow": "Retail guests",
+      "paths.retail.title": "Choose and order quickly",
+      "paths.retail.lead": "See today's prices, add items to your cart, and send the order through Zalo.",
+      "paths.retail.1": "Take away at the store",
+      "paths.retail.2": "Free nearby delivery when eligible",
+      "paths.retail.3": "City-wide delivery through apps",
+      "paths.wholesale.eyebrow": "Shops & resellers",
+      "paths.wholesale.title": "Wholesale, delivered regularly",
+      "paths.wholesale.lead": "Discuss quantity, schedule, and products suited to your business.",
+      "paths.wholesale.1": "Large orders welcome",
+      "paths.wholesale.2": "Scheduled pre-orders",
+      "paths.wholesale.3": "Quotes tailored to your needs",
+      "paths.wholesale.cta": "Get a wholesale quote",
+      "menuHero.eyebrow": "Dakao menu",
+      "menuHero.title": "Familiar favorites for every morning",
+      "menuHero.lead": "Banh mi, bao, sticky rice, and sides — updated directly by the store.",
+      "menuHero.noteTitle": "Made fresh daily",
+      "menuHero.note": "Contact us to confirm availability and pickup time.",
       "about.eyebrow": "About us",
       "about.title": "Meet Bánh Mì Đakao",
       "about.body":
@@ -1418,6 +1515,7 @@
 
   function renderCatalog(products) {
     const bestGrid = document.getElementById("best-sellers-grid");
+    const homeBestGrid = document.getElementById("home-best-sellers-grid");
     const categoriesEl = document.getElementById("product-categories");
 
     catalogProducts = products;
@@ -1427,6 +1525,15 @@
       const bestsellers = products.filter((p) => p.bestseller);
       bestGrid.innerHTML = bestsellers.length
         ? bestsellers.map((p) => productCardHtml(p, "h3")).join("")
+        : `<li class="catalog-loading" data-i18n="catalog.empty">${escapeHtml(t("catalog.empty"))}</li>`;
+    }
+
+    if (homeBestGrid) {
+      const featured = products
+        .filter((p) => p.bestseller)
+        .slice(0, 3);
+      homeBestGrid.innerHTML = featured.length
+        ? featured.map((p) => productCardHtml(p, "h3")).join("")
         : `<li class="catalog-loading" data-i18n="catalog.empty">${escapeHtml(t("catalog.empty"))}</li>`;
     }
 
@@ -1483,7 +1590,7 @@
   }
 
   function wireCatalogImages() {
-    document.querySelectorAll("#best-sellers-grid img, #product-categories img").forEach((img) => {
+    document.querySelectorAll("#home-best-sellers-grid img, #best-sellers-grid img, #product-categories img").forEach((img) => {
       const markMissing = () => img.setAttribute("data-missing", "");
       if (img.complete && img.naturalWidth === 0) {
         markMissing();
@@ -1547,10 +1654,14 @@
     console.error("Catalog load failed", lastError);
     showCatalogError(t("catalog.error"));
     const bestGrid = document.getElementById("best-sellers-grid");
+    const homeBestGrid = document.getElementById("home-best-sellers-grid");
     const categoriesEl = document.getElementById("product-categories");
     const empty = `<p class="catalog-loading" data-i18n="catalog.error">${escapeHtml(t("catalog.error"))}</p>`;
     if (bestGrid) {
       bestGrid.innerHTML = `<li class="catalog-loading" data-i18n="catalog.error">${escapeHtml(t("catalog.error"))}</li>`;
+    }
+    if (homeBestGrid) {
+      homeBestGrid.innerHTML = `<li class="catalog-loading" data-i18n="catalog.error">${escapeHtml(t("catalog.error"))}</li>`;
     }
     if (categoriesEl) categoriesEl.innerHTML = empty;
     applyI18n();

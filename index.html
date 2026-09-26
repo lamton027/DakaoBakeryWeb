@@ -4,12 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="Bánh Mì Đakao — bánh mì, bánh bao, sandwich, chả lụa. Ăn ngon mỗi ngày. Hơn 30 năm bánh tươi." />
+  <link rel="canonical" href="https://banhmidakao.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta property="og:site_name" content="Bánh Mì Đakao" />
+  <meta property="og:title" content="Bánh Mì Đakao — Hơn 30 năm bánh tươi mỗi ngày" />
+  <meta property="og:description" content="Bánh mì, bánh bao và các món ăn sáng làm mới mỗi ngày. Nhận khách lẻ, đặt trước và đơn số lượng lớn." />
+  <meta property="og:url" content="https://banhmidakao.com/" />
+  <meta property="og:image" content="https://banhmidakao.com/assets/hero-banh-mi.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>Bánh Mì Đakao — Ăn ngon mỗi ngày</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=brand-refresh-4" />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Bánh Mì Đakao",
+    "url": "https://banhmidakao.com/",
+    "image": "https://banhmidakao.com/assets/hero-banh-mi.jpg",
+    "telephone": "+84907827072",
+    "priceRange": "₫",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "18 Ngô Tất Tố",
+      "addressLocality": "Thành phố Hồ Chí Minh",
+      "addressCountry": "VN"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "05:00",
+      "closes": "20:00"
+    }]
+  }
+  </script>
 </head>
 <body>
   <!--
@@ -66,26 +98,47 @@
   <main id="main">
     <div id="page-home" class="page-panel" data-page="home">
     <!-- === EDIT: Hero === -->
-    <!-- Tạm ẩn Hero vì chưa có nội dung; bỏ comment để hiện lại.
     <section id="top" class="hero" aria-labelledby="hero-brand">
       <div class="hero-media media-slot" data-ph="Hero">
-        <img src="assets/hero.jpg" alt="" width="1920" height="1080" />
+        <img src="assets/hero-banh-mi.jpg" alt="Bánh mì nóng giòn của Bánh Mì Đakao" width="1920" height="1080" />
       </div>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="shell hero-content">
         <p class="hero-kicker" data-i18n="hero.kicker">Tiệm bánh · Hơn 30 năm</p>
-        <h1 id="hero-brand" class="hero-brand">
-          <img class="hero-logo" src="assets/logo.png" alt="Bánh Mì Đakao" width="352" height="103" />
-        </h1>
-        <p class="hero-slogan" data-i18n="slogan">Ăn ngon mỗi ngày</p>
-        <p class="hero-lead" data-i18n="hero.lead">Bánh tươi mỗi sáng — phục vụ khách lẻ và đơn số lượng lớn. Gọi, nhắn Zalo hoặc đặt online.</p>
+        <h1 id="hero-brand"><span class="hero-title-line" data-i18n="brandHero.title1">Bánh tươi mỗi sáng.</span><br /><span data-i18n="brandHero.title2">Vị quen hơn 30 năm.</span></h1>
+        <p class="hero-lead" data-i18n="brandHero.lead">Từ ổ bánh nóng giòn đến món ăn sáng tiện lợi — làm mới mỗi ngày cho khách ghé tiệm và đơn số lượng lớn.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#san-pham" data-i18n="cta.products">Xem sản phẩm</a>
-          <button type="button" class="btn btn-light" data-open-cart data-i18n="cta.order">Đặt hàng online</button>
+          <a class="btn btn-primary" href="#san-pham" data-i18n="cta.products">Xem thực đơn</a>
+          <a class="btn btn-outline-light" href="https://zalo.me/0907827072" target="_blank" rel="noopener noreferrer" data-i18n="brandHero.zalo">Đặt qua Zalo</a>
         </div>
+        <p class="hero-note" data-i18n="brandHero.note">Mở cửa mỗi ngày · 05:00–20:00 · 18 Ngô Tất Tố</p>
       </div>
     </section>
-    -->
+
+    <section class="brand-proof" aria-label="Điểm nổi bật của Bánh Mì Đakao">
+      <div class="shell brand-proof-grid">
+        <div><strong>30+</strong><span data-i18n="proof.years">Năm giữ vị bánh quen</span></div>
+        <div><strong data-i18n="proof.dailyTitle">Mỗi ngày</strong><span data-i18n="proof.daily">Bánh được làm mới</span></div>
+        <div><strong>05:00</strong><span data-i18n="proof.morning">Sẵn sàng cho buổi sáng</span></div>
+        <div><strong data-i18n="proof.retailTitle">Lẻ &amp; sỉ</strong><span data-i18n="proof.retail">Nhận đặt trước số lượng lớn</span></div>
+      </div>
+    </section>
+
+    <section class="section home-favorites" aria-labelledby="home-favorites-title">
+      <div class="shell">
+        <div class="section-head brand-section-head">
+          <div>
+            <p class="eyebrow" data-i18n="homeBest.eyebrow">Bắt đầu từ món quen</p>
+            <h2 id="home-favorites-title" data-i18n="homeBest.title">Những món khách thường chọn</h2>
+            <p class="lead" data-i18n="homeBest.lead">Xem nhanh các món được yêu thích trước khi khám phá toàn bộ thực đơn.</p>
+          </div>
+          <a class="text-link" href="#san-pham" data-i18n="homeBest.link">Xem toàn bộ thực đơn →</a>
+        </div>
+        <ul class="product-grid brand-product-grid" id="home-best-sellers-grid" data-catalog="home-bestsellers">
+          <li class="catalog-loading">Đang tải sản phẩm…</li>
+        </ul>
+      </div>
+    </section>
 
     <!-- === EDIT: Giới thiệu === -->
     <section id="gioi-thieu" class="section about" aria-labelledby="about-title">
@@ -118,9 +171,15 @@
           <div class="about-gallery-dots" data-about-gallery-dots></div>
         </div>
         <div class="about-copy reveal">
-          <p class="eyebrow" data-i18n="about.eyebrow">Về chúng tôi</p>
-          <h2 id="about-title" data-i18n="about.title">Giới thiệu Bánh Mì Đakao</h2>
-          <p class="lead" data-i18n="about.body">Hơn 30 năm gắn với từng ổ bánh nóng mỗi sáng, Bánh Mì Đakao giữ một điều giản dị: làm mới mỗi ngày để bạn ăn ngon mỗi ngày — từ khách ghé quán đến đơn sỉ cho quầy.</p>
+          <p class="eyebrow" data-i18n="story.eyebrow">Câu chuyện Đakao</p>
+          <h2 id="about-title" data-i18n="story.title">Một tiệm bánh, một lời hứa giản dị</h2>
+          <p class="lead" data-i18n="story.lead">Hơn 30 năm gắn với từng ổ bánh nóng mỗi sáng, Bánh Mì Đakao vẫn giữ một điều: chuẩn bị chỉn chu, làm mới mỗi ngày và phục vụ theo cách gần gũi nhất.</p>
+
+          <div class="story-points" aria-label="Giá trị thương hiệu">
+            <div><span>01</span><p><strong data-i18n="story.1.title">Giữ vị quen</strong><span data-i18n="story.1.body">Ổ bánh giòn, ruột mềm và những món ăn sáng thân thuộc.</span></p></div>
+            <div><span>02</span><p><strong data-i18n="story.2.title">Làm mới mỗi ngày</strong><span data-i18n="story.2.body">Bánh và món kèm được chuẩn bị theo ngày bán.</span></p></div>
+            <div><span>03</span><p><strong data-i18n="story.3.title">Phục vụ linh hoạt</strong><span data-i18n="story.3.body">Từ một phần mang đi đến đơn sỉ cho quán.</span></p></div>
+          </div>
 
           <h3 class="why-title" data-i18n="why.title">Vì sao chọn chúng tôi</h3>
           <ul class="why-list">
@@ -211,21 +270,46 @@
     </section>
 
     <!-- === EDIT: Giao hàng / sỉ === -->
-    <section id="giao-hang" class="section delivery" aria-labelledby="delivery-title">
-      <div class="shell delivery-panel reveal">
-        <div>
-          <p class="eyebrow" data-i18n="delivery.eyebrow">Giao hàng &amp; đặt sỉ</p>
-          <h2 id="delivery-title" data-i18n="delivery.title">Giao tận nơi — nhận đơn lớn</h2>
-          <p class="lead" data-i18n="delivery.lead">Đặt trước trong ngày để giữ suất bánh tươi. Hỗ trợ khách lẻ và đại lý / quán.</p>
+    <section id="giao-hang" class="section order-paths" aria-labelledby="delivery-title">
+      <div class="shell">
+        <div class="section-head brand-section-head">
+          <div>
+            <p class="eyebrow" data-i18n="paths.eyebrow">Bạn đang cần gì?</p>
+            <h2 id="delivery-title" data-i18n="paths.title">Chọn cách đặt phù hợp</h2>
+            <p class="lead" data-i18n="paths.lead">Mua một bữa sáng hay chuẩn bị hàng đều đặn cho quán, chúng tôi đều có cách phục vụ rõ ràng.</p>
+          </div>
         </div>
-        <ul class="delivery-points">
-          <li data-i18n="delivery.1">Miễn phí giao trong phạm vi 3km với đơn từ 300.000đ</li>
-          <li data-i18n="delivery.2">Giao toàn thành phố qua các ứng dụng đặt hàng</li>
-          <li data-i18n="delivery.3">Nhận đặt trước và đơn số lượng lớn — gọi hoặc Zalo để báo giá</li>
-        </ul>
-        <div class="delivery-actions">
-          <button type="button" class="btn btn-primary" data-open-cart data-i18n="cta.order">Đặt hàng online</button>
-          <a class="btn btn-outline" href="https://zalo.me/0907827072" target="_blank" rel="noopener noreferrer">Zalo</a>
+        <div class="order-path-grid">
+          <article class="order-path-card retail-path">
+            <span class="order-path-number">01</span>
+            <p class="eyebrow" data-i18n="paths.retail.eyebrow">Khách mua lẻ</p>
+            <h3 data-i18n="paths.retail.title">Chọn món, đặt nhanh</h3>
+            <p data-i18n="paths.retail.lead">Xem giá trong ngày, thêm món vào giỏ và gửi đơn trực tiếp qua Zalo.</p>
+            <ul>
+              <li data-i18n="paths.retail.1">Mang đi tại cửa hàng</li>
+              <li data-i18n="paths.retail.2">Giao gần miễn phí theo điều kiện đơn</li>
+              <li data-i18n="paths.retail.3">Giao rộng hơn qua ứng dụng</li>
+            </ul>
+            <div class="order-path-actions">
+              <a class="btn btn-primary" href="#san-pham">Xem thực đơn</a>
+              <button type="button" class="btn btn-outline" data-open-cart>Mở giỏ hàng</button>
+            </div>
+          </article>
+          <article class="order-path-card wholesale-path">
+            <span class="order-path-number">02</span>
+            <p class="eyebrow" data-i18n="paths.wholesale.eyebrow">Quán &amp; đại lý</p>
+            <h3 data-i18n="paths.wholesale.title">Đặt sỉ, giao đều</h3>
+            <p data-i18n="paths.wholesale.lead">Trao đổi số lượng, lịch giao và sản phẩm phù hợp với mô hình bán của bạn.</p>
+            <ul>
+              <li data-i18n="paths.wholesale.1">Nhận đơn số lượng lớn</li>
+              <li data-i18n="paths.wholesale.2">Hỗ trợ đặt trước theo lịch</li>
+              <li data-i18n="paths.wholesale.3">Báo giá trực tiếp theo nhu cầu</li>
+            </ul>
+            <div class="order-path-actions">
+              <a class="btn btn-light" href="https://zalo.me/0907827072" target="_blank" rel="noopener noreferrer" data-i18n="paths.wholesale.cta">Nhận báo giá sỉ</a>
+              <a class="text-link light-link" href="tel:+84907827072">Gọi 0907 827 072</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -284,6 +368,19 @@
     </div>
 
     <div id="page-products" class="page-panel" data-page="products" hidden>
+    <section class="menu-intro" aria-labelledby="menu-intro-title">
+      <div class="shell menu-intro-inner">
+        <div>
+          <p class="eyebrow" data-i18n="menuHero.eyebrow">Thực đơn Đakao</p>
+          <h1 id="menu-intro-title" data-i18n="menuHero.title">Món quen cho mỗi buổi sáng</h1>
+          <p data-i18n="menuHero.lead">Bánh mì, bánh bao, xôi và món ăn kèm — cập nhật trực tiếp từ cửa hàng.</p>
+        </div>
+        <div class="menu-intro-note">
+          <strong data-i18n="menuHero.noteTitle">Làm mới mỗi ngày</strong>
+          <span data-i18n="menuHero.note">Liên hệ để xác nhận món còn và thời gian nhận.</span>
+        </div>
+      </div>
+    </section>
     <!-- === EDIT: Best sellers === -->
     <section id="best-sellers" class="section bestsellers" aria-labelledby="best-title">
       <div class="shell">
@@ -329,6 +426,7 @@
           <img class="logo-img" src="assets/logo.png" alt="Đakao" width="182" height="53" />
         </a>
         <p data-i18n="slogan">Ăn ngon mỗi ngày</p>
+        <span>Hơn 30 năm làm bánh tươi cho mỗi buổi sáng.</span>
       </div>
       <div>
         <h3 data-i18n="footer.explore">Khám phá</h3>
@@ -467,6 +565,6 @@
     </div>
   </div>
 
-  <script src="script.js" defer></script>
+  <script src="script.js?v=brand-refresh-4" defer></script>
 </body>
 </html>
