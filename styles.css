@@ -1664,7 +1664,7 @@ body.modal-open {
   }
 
   .footer-grid {
-    grid-template-columns: 1.4fr 1fr 1.2fr;
+    grid-template-columns: 1.5fr 1fr;
   }
 
   .hero-content {
@@ -1692,28 +1692,50 @@ body.modal-open {
 }
 
 .footer-contact {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.75rem;
   background:
-    radial-gradient(circle at 8% 15%, rgba(244, 162, 97, 0.14), transparent 30%),
-    var(--bg);
-  color: var(--ink);
+    radial-gradient(circle at 8% 15%, rgba(244, 162, 97, 0.16), transparent 30%),
+    transparent;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-contact h2 {
+  color: #fff;
+}
+
+.footer-contact .contact-panel {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.footer-contact .lead,
+.footer-contact .contact-list dd {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-contact .contact-list dt {
+  color: var(--primary);
 }
 
 .site-footer .footer-contact a:not(.btn) {
-  color: var(--primary-dark);
+  color: var(--primary);
 }
 
 .site-footer .footer-contact a:not(.btn):hover {
-  color: var(--ink);
+  color: #fff;
 }
 
 .site-footer .footer-contact .btn-outline {
-  color: var(--ink);
-  border-color: var(--ink);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.72);
 }
 
 .site-footer .footer-contact .btn-outline:hover {
-  color: #fff;
+  color: var(--ink);
+  background: #fff;
+  border-color: #fff;
 }
 
 .hero {
