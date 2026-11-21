@@ -33,10 +33,13 @@
     "Điện thoại · Zalo": "Phone · Zalo", "Chỉ đường đến tiệm": "Get directions", "Nhắn Zalo": "Message on Zalo",
     "Khám phá": "Explore", "Liên hệ": "Contact", "Tìm chúng tôi": "Find us", "Mở Google Maps ↗": "Open Google Maps ↗",
     "Bánh tươi mỗi ngày · Vị quen hơn 30 năm": "Fresh bread every day · A familiar taste for over 30 years", "Gọi": "Call", "Đặt hàng": "Order", "Bản đồ": "Map",
-    "Bánh bao": "Steamed buns", "Món ăn kèm": "Sides", "Chọn món hôm nay": "Choose today's favourites",
+    "Bánh bao": "Steamed buns", "Món ăn kèm": "Sides", "Các Món Ăn Kèm": "Sides", "Chọn món hôm nay": "Choose today's favourites",
     "Giá tính theo đơn vị ghi bên cạnh. Với món chưa niêm yết giá, vui lòng liên hệ cửa hàng để nhận giá hiện tại.": "Prices follow the unit shown. For items without a listed price, please contact the bakery for the current price.",
     "món · Phục vụ từ 05:00": "items · Served from 05:00", "Đang chuẩn bị dữ liệu thực đơn…": "Preparing menu data…",
     "Giá tham khảo · Vui lòng liên hệ để xác nhận": "Reference prices · Please contact us to confirm",
+    "Đang đồng bộ từ Google Sheet…": "Syncing from Google Sheet…",
+    "Google Sheet chưa có món để hiển thị": "Google Sheet has no items to display",
+    "Không thể tải thực đơn · Vui lòng thử lại": "Unable to load the menu · Please try again",
     "Ổ bánh cổ điển — vỏ giòn, ruột mềm.": "Classic baguette — crisp crust, soft crumb.", "Mới ra lò trong ngày — nóng và thơm.": "Fresh from the oven — warm and fragrant.",
     "Bánh bao mềm, nhân đậm đà.": "Soft steamed bun with a savoury filling.", "Hấp mới mỗi ngày — mang đi tiện.": "Steamed fresh daily — easy to take away.",
     "Vị ngọt nhẹ — phù hợp ăn sáng hoặc trà chiều.": "Gently sweet — ideal for breakfast or afternoon tea.", "Nhân mặn cân bằng — mang đi tiện.": "Balanced savoury filling — easy to take away.",
@@ -75,7 +78,10 @@
   function translateNode(node, language) {
     if (!originalText.has(node)) originalText.set(node, node.nodeValue.trim());
     const source = originalText.get(node);
-    const value = language === "en" ? (translations[source] || source) : source;
+    const updatedMatch = source.match(/^Đã cập nhật (\d+) món từ Google Sheet$/);
+    const value = language === "en"
+      ? (translations[source] || (updatedMatch ? `Updated ${updatedMatch[1]} items from Google Sheet` : source))
+      : source;
     const leading = node.nodeValue.match(/^\s*/)?.[0] || "";
     const trailing = node.nodeValue.match(/\s*$/)?.[0] || "";
     node.nodeValue = `${leading}${value}${trailing}`;
