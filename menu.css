@@ -1,0 +1,80 @@
+.menu-page { background: var(--paper); }
+.desktop-nav .is-current { color: var(--oxblood); }
+.desktop-nav .is-current::after { transform: scaleX(1); }
+
+.menu-sheet { padding-top: clamp(64px, 8vw, 105px); background: #efe4d3; }
+.menu-sheet-inner { max-width: 1100px; }
+.menu-sheet-heading { display: grid; grid-template-columns: 1fr minmax(250px, .55fr); align-items: end; gap: 40px; margin-bottom: 65px; }
+.menu-sheet-heading .eyebrow { grid-column: 1 / -1; margin-bottom: -18px; }
+.menu-sheet-heading h1 { margin: 0; font-family: var(--serif); font-size: clamp(3.2rem, 6vw, 6rem); line-height: 1; letter-spacing: -.05em; }
+.menu-sheet-heading > p:last-child { margin: 0 0 7px; color: var(--ink-soft); }
+.menu-sheet-summary { align-self: end; }
+.menu-sheet-summary > p:first-child { margin: 0; color: var(--ink-soft); }
+.menu-sheet-count { margin: 13px 0 0; color: var(--ink); font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.menu-sync-status { display: inline-flex; align-items: center; gap: 8px; margin: 13px 0 0; color: var(--oxblood); font-size: .68rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.menu-sync-status::before { content: ""; width: 7px; height: 7px; flex: none; background: currentColor; border-radius: 50%; }
+.menu-sync-status[data-state="loading"]::before { animation: menu-pulse 1s ease-in-out infinite alternate; }
+.menu-sync-status[data-state="error"] { color: #95542f; }
+.menu-sync-status[data-state="empty"] { color: #95542f; }
+.menu-sync-status[data-state="live"] { color: #3f6e49; }
+.menu-category[hidden] { display: none; }
+@keyframes menu-pulse { to { opacity: .25; transform: scale(.75); } }
+
+.menu-board { border-top: 1px solid var(--ink); }
+.menu-category { min-width: 0; display: grid; grid-template-columns: minmax(180px, .38fr) minmax(0, 1fr); gap: clamp(36px, 7vw, 92px); padding: clamp(38px, 5vw, 64px) 0; border-bottom: 1px solid var(--ink); scroll-margin-top: calc(var(--header) + 76px); }
+.category-heading { display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-content: start; }
+.category-heading > span { color: var(--orange); font-family: var(--serif); font-size: 1.1rem; }
+.category-heading p { margin: 0 0 3px; color: var(--oxblood); font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.category-heading h2 { font-size: clamp(2.2rem, 3.6vw, 3.5rem); }
+.menu-items { border-top: 1px solid var(--line); }
+.menu-item { display: grid; grid-template-columns: minmax(0, 1fr) minmax(82px, auto); align-items: center; gap: 28px; min-height: 126px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.menu-item-main { min-width: 0; display: grid; grid-template-columns: 112px minmax(0, 1fr); align-items: center; gap: 22px; }
+.menu-item-thumb { position: relative; width: 112px; height: 86px; display: grid; place-items: center; margin: 0; overflow: hidden; color: var(--cream); background: var(--oxblood); }
+.menu-item-thumb::after { content: ""; position: absolute; inset: 7px; border: 1px solid rgba(255,255,255,.35); pointer-events: none; }
+.menu-item-thumb > span { font-family: var(--serif); font-size: 1.55rem; font-weight: 700; letter-spacing: -.03em; }
+.menu-item-thumb img { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.menu-item-thumb.has-image::after { display: none; }
+.menu-item-copy { min-width: 0; }
+.menu-item h3 { margin: 0; font-family: var(--serif); font-size: 1.18rem; line-height: 1.25; }
+.menu-item h3 span { color: var(--ink-soft); font-family: var(--sans); font-size: .66rem; font-weight: 500; letter-spacing: .01em; white-space: nowrap; }
+.menu-item p { margin: 7px 0 0; color: var(--ink-soft); font-size: .78rem; line-height: 1.55; }
+.menu-item-highlight h3::after { content: "Bán chạy"; display: inline-block; margin-left: 8px; padding: 3px 6px; color: white; background: var(--oxblood); font-family: var(--sans); font-size: .52rem; font-weight: 700; letter-spacing: .06em; vertical-align: 2px; text-transform: uppercase; }
+.menu-price { min-width: 72px; text-align: right; }
+.menu-price strong { display: block; color: var(--oxblood); font-family: var(--serif); font-size: 1.08rem; white-space: nowrap; }
+.menu-price span { display: block; margin-top: 2px; color: var(--ink-soft); font-size: .64rem; }
+.menu-note { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 36px; padding: 27px 30px; color: var(--ink); background: var(--orange-light); }
+.menu-note span { font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.menu-note p { max-width: 680px; margin: 6px 0 0; font-size: .85rem; }
+.menu-note .button { flex: none; }
+
+.menu-order { padding: clamp(75px, 9vw, 125px) 0; color: white; background: var(--oxblood-dark); }
+.menu-order-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(50px, 9vw, 130px); align-items: end; }
+.menu-order h2 { max-width: 720px; font-size: clamp(2.7rem, 5vw, 5rem); }
+.menu-order-grid > div:last-child > p { margin: 0; color: rgba(255,255,255,.7); }
+.menu-order-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+@media (max-width: 980px) {
+  .menu-sheet-heading { grid-template-columns: 1fr; gap: 24px; }
+  .menu-sheet-heading .eyebrow { grid-column: auto; margin-bottom: -8px; }
+  .menu-category { grid-template-columns: 1fr; gap: 25px; }
+  .menu-order-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 680px) {
+  .menu-sheet-heading { margin-bottom: 42px; }
+  .menu-sheet-heading h1 { font-size: 3.2rem; }
+  .menu-sheet-heading > p:last-child { font-size: .85rem; }
+  .menu-sheet-summary > p:first-child { font-size: .85rem; }
+  .menu-category { padding: 34px 0; }
+  .menu-item { grid-template-columns: minmax(0, 1fr) 68px; gap: 10px; min-height: 104px; padding: 15px 0; }
+  .menu-item-main { grid-template-columns: 76px minmax(0, 1fr); gap: 13px; }
+  .menu-item-thumb { width: 76px; height: 76px; }
+  .menu-item-thumb > span { font-size: 1.1rem; }
+  .menu-item h3 { font-size: 1.08rem; }
+  .menu-item h3 span { display: block; margin-top: 3px; white-space: normal; }
+  .menu-item p { font-size: .73rem; }
+  .menu-price { min-width: 68px; }
+  .menu-price strong { font-size: .9rem; }
+  .menu-note { align-items: stretch; flex-direction: column; gap: 20px; padding: 24px 20px; }
+  .menu-order-actions { flex-direction: column; }
+}
